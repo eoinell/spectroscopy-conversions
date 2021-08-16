@@ -1,0 +1,48 @@
+#:kivy 1.0.9
+
+<FormPair>: # defined as boxlayout in main
+    label: 'placeholder label'
+    unit: '(nm)'
+    orientation: 'horizontal'
+    val_input: float_input
+    Label:
+        text: root.label
+    FloatInput:
+        id: float_input
+        text: ''
+        multiline: 'False'
+        padding_x: (1,1)
+        padding_y: [1,1]
+
+    Label:
+        text: root.unit
+            
+<ConversionWidget>:
+    laser_widget: kv_laser
+    ev_widget: kv_ev
+    nm_widget: kv_nm
+    cm_widget: kv_cm
+    thz_widget: kv_thz
+    BoxLayout:
+        top: root.top - 10
+        orientation: 'vertical'
+        FormPair:
+            id: kv_laser
+            label: 'laser'
+            unit: 'nm'
+        FormPair:
+            id: kv_ev
+            label: 'electron volts'
+            unit: 'eV'
+        FormPair:
+            id: kv_nm
+            label: 'wavelength'
+            unit: 'nm'
+        FormPair:
+            id: kv_cm
+            label: 'Raman shift'
+            unit: 'cm-1'
+        FormPair:
+            id: kv_thz
+            label: 'Terahertz'
+            unit: 'THz'
