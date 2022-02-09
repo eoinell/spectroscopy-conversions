@@ -39,11 +39,6 @@ class ConversionWidget(BoxLayout):
     nm_widget = ObjectProperty(None)
     cm_widget = ObjectProperty(None)
     thz_widget = ObjectProperty(None)
-    
-    # laser = NumericProperty(633)
-    # ev = NumericProperty(1)
-    # nm = NumericProperty(1)
-    # cm = NumericProperty(1)
 
     def __init__(self):
         super().__init__()
